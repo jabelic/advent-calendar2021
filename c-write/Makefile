@@ -10,6 +10,6 @@ test: #tcc
 		./test.sh
 
 clean: 
-		rm -f 9cc *.o *~ a.out tcc
+		rm -f *.o *~ a.out tcc
 
 .PHONY: test clean
