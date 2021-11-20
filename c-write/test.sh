@@ -3,6 +3,8 @@
 test(){
     expected="$1"
     input="$2"
-    ./tcc
+    # ./tcc
+    cc main.c
+    ./a.out
 }
 test 0 0

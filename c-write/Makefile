@@ -6,7 +6,7 @@ SRCS=$(wildcard *.c)
 OBJS=$(SRCS:.c=.o)
 tcc: $(OBJS)
 		 $(CC) -o tcc $(OBJS) $(LDFLAGS)
-test: tcc
+test: #tcc
 		./test.sh
 
 clean: 
