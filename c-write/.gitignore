@@ -1,3 +1,4 @@
 *.o
 tcc
 a.out
+.vscode
