@@ -29,10 +29,9 @@ scan myscan(char *input)
     u_int8_t buf[BUF_SIZE]; // BUF_SIZE byte. ここに書き込む.
     // typedef unsigned char u_int8_t
     // unsigned 8bit int data, 0~255.
-    int fd = open(input, O_RDONLY);
-    ssize_t nread;                      // バイト数あるいはエラー発生通知を返す関数の型. エラーなら負の数を返す.
-    write(0, input, strlen(input) - 1); //
-    nread = read(0, buf, sizeof buf);   //　読み込んだbyte数を返す
+    ssize_t nread;                    // バイト数あるいはエラー発生通知を返す関数の型. エラーなら負の数を返す.
+    write(0, input, strlen(input));   //
+    nread = read(0, buf, sizeof buf); // 読み込んだbyte数を返す
     scan scan_obj;
     char *returns = calloc(1, sizeof(nread));
     for (int i = 0; i < nread; i++)
